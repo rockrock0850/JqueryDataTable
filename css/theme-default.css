@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* === data table  === */
+.table thead tr th, .table tbody tr th {
+	background-color: #0093c4 !important;
+	color:#fff;
+	text-shadow: none;
+}
+.table thead tr th.light, .table tbody tr th.light {
+	color:#222;
+	background-color: #eafeff !important;
+}
+.table thead tr th.medium, .table tbody tr th.medium {
+	color:#222;
+	background-color: #d0f0ef !important;
+}
+.table thead tr th.dark, .table tbody tr th.dark {
+	color:#222;
+	background-color: #a8eaff !important;
+}
+.table tbody tr:nth-child(even) {
+	background-color:#f4f4f4 !important;
+}
+.table tbody tr.active td, .table tbody tr.active th {
+	background-color: #aaeaff !important;
+}
