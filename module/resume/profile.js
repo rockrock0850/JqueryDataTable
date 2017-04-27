@@ -3,11 +3,8 @@ var profile = (function() {
 		//Do something...
 	}
 	
-	/* BEGIN Private Method */
-	
-		//Do something...
-		
-	/* END Private Method */
+	/* Inner Method 
+	========================================================= */
 	
 	return{
 		init: init

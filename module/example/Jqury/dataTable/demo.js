@@ -3,9 +3,9 @@ var demo = (function() {
 		initDataTable();
 	}
 	
-	/* BEGIN Private Method */
-	
-	/* 初始化DataTable */
+	/* Inner Method 
+	========================================================= */
+	//初始化DataTable
 	var initDataTable = function() {
 		timeFlag('BEGIN TIME: ', new Date());
 		
@@ -51,8 +51,8 @@ var demo = (function() {
 				{sWidth: '5.5%', aTargets: [17], title: '處理人員', data: 'PROCESS_USER_NAME', className: 'PROCESS_USER_NAME'}
 			]
 		});
-		
 		shiftTableRelatedElements();
+		
 		timeFlag('END TIME: ', new Date());
 	}
 	
@@ -100,8 +100,6 @@ var demo = (function() {
 		$searchResult.find('[class$=_filter]').addClass('pull-left');// 將過濾欄位靠左
 		$searchResult.find('[class$=_paginate]').attr('align', 'right');// 將dataTable分頁靠右
 	}
-		
-	/* END Private Method */
 	
 	return{
 		init: init

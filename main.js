@@ -11,8 +11,9 @@ var main = (function() {
 		$footer.load('resource/common/layout/footer.html');
 	}
 	
-	/* BEGIN Private Method */
-	
+	/* Inner Method 
+	========================================================= */
+	//
 	var seMmenuClickListener = function() {
 		var $a = $('nav#nav a');
 		$a.unbind('click').click(function() {
@@ -24,8 +25,6 @@ var main = (function() {
 				window.location.href = "#header" : window.location.href = "#content";
 		});
 	}
-		
-	/* END Private Method */
 	
 	return {
 		init: init

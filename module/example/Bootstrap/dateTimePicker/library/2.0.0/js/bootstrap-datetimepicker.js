@@ -578,7 +578,7 @@
       top = top - containerOffset.top;
       left = left - containerOffset.left;
 
-	  /* 注意: top屬性可以調整bootstrap date picker顯示的視窗的上下位置 */
+	  // 注意: top屬性可以調整bootstrap date picker顯示的視窗的上下位置
       this.picker.css({
         top:    top,
         left:   left,
@@ -1418,8 +1418,8 @@
   };
   $.fn.datetimepicker.Constructor = Datetimepicker;
   var dates = $.fn.datetimepicker.dates = {
-    en: 
-	{
+	  // 注意: 直接強制設定預設語言為中文( 因為用函式庫設定失敗 )
+    en:{
 	  days:        ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
 	  daysShort:   ["週日", "週一", "週二", "週三", "週四", "週五", "週六", "週日"],
 	  daysMin:     ["日", "一", "二", "三", "四", "五", "六", "日"],
@@ -1433,7 +1433,7 @@
 	  weekStart:   true
 	}
 	/*
-	{
+    en:{
       days:        ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
       daysShort:   ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
       daysMin:     ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
