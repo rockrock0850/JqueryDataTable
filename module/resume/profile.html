@@ -1,28 +1,126 @@
-<div style='margin-left: 44%;'>
-	<section id='subTitle'>
-		<h2>About Me</h2>
-	</section>
-	<section id="subContent">
-		<form>
-			<div class='form-group'>
-				<div class='row'>
-					<label>Name: Kuang Lun Yeh</label>
-				</div>
-			</div>
-			<div class='form-group'>
-				<div class='row'>
-					<label>Age: 28</label>
-				</div>
-			</div>
-			<div class='form-group'>
-				<div class='row'>
-					<label>Cell Phone: 0934-289-164</label>
-				</div>
-			</div>
-		</form>
-	</section>
-</div>
+<section class='my_name'>
+	<h1 tkey='lang.name.fullName'></h1>
+	<h3 class='nick_name' tkey='lang.name.nickname'></h3>
+</section>
 
-<!-- BEGIN Custom Script -->
-<script type="text/javascript" src="module/resume/profile.js"></script>
-<!-- END Custom Script -->
+<section class='my_introduction'>
+	<!-- Personal Data -->
+	<div class='form-group row intro_title'>
+		<h3 tkey='lang.words.personalData'></h3>
+		<hr class='hr'>
+	</div>
+	<div class='intro_content'>
+		<div class='form-group row'>
+			<label class='col-md-3 col-form-label' tkey='lang.words.palce'></label>
+			<div class='col-md-5'>
+				<p class='form-control-static' tkey='lang.profile.area'></p>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label class='col-md-3 col-form-label' tkey='lang.words.dateOfBirth'></label>
+			<div class='col-md-5'>
+				<p class='form-control-static' tkey='lang.profile.birthday'></p>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label class='col-md-3 col-form-label' tkey='lang.words.phone'></label>
+			<div class='col-md-5'>
+				<p class='form-control-static' tkey='lang.profile.tel'></p>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label class='col-md-3 col-form-label' tkey='lang.words.email'></label>
+			<div class='col-md-5'>
+				<p class='form-control-static' tkey='lang.profile.email'></p>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Work Experience -->
+	<div class='form-group row intro_title'>
+		<h3 tkey='lang.words.workExperience'></h3>
+		<hr class='hr'>
+	</div>
+	<div class='intro_content'>
+		<div class='form-group row'>
+			<label class='col-md-4 col-form-label' tkey='lang.profile.exp.current'></label>
+			<div class='col-md-8 vertical_line'>
+				<p class='form-control-static experience' tkey='lang.profile.exp.current.info.1'></p>
+				<p class='form-control-static experience' tkey='lang.profile.exp.current.info.2'></p>
+				<p class='form-control-static experience' tkey='lang.profile.exp.current.info.3'></p>
+				<p class='form-control-static experience' tkey='lang.profile.exp.current.info.4'></p>
+				<p class='form-control-static experience' tkey='lang.profile.exp.current.info.5'></p>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label class='col-md-4 col-form-label' tkey='lang.profile.exp.2'></label>
+			<div class='col-md-8 vertical_line'>
+				<p class='form-control-static experience' tkey='lang.profile.exp.2.info.1'></p>
+				<p class='form-control-static experience' tkey='lang.profile.exp.2.info.2'></p>
+				<p class='form-control-static experience' tkey='lang.profile.exp.2.info.3'></p>
+				<p class='form-control-static experience' tkey='lang.profile.exp.2.info.4'></p>
+				<p class='form-control-static experience' tkey='lang.profile.exp.2.info.5'></p>
+				<p class='form-control-static experience' tkey='lang.profile.exp.2.info.6'></p>
+				<p class='form-control-static experience' tkey='lang.profile.exp.2.info.7'></p>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label class='col-md-4 col-form-label' tkey='lang.profile.exp.1'></label>
+			<div class='col-md-8 vertical_line'>
+				<p class='form-control-static experience' tkey='lang.profile.exp.1.info.1'></p>
+				<p class='form-control-static experience' tkey='lang.profile.exp.1.info.2'></p>
+				<p class='form-control-static experience' tkey='lang.profile.exp.1.info.3'></p>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Education -->
+	<div class='form-group row intro_title'>
+		<h3 tkey='lang.words.education'></h3>
+		<hr class='hr'>
+	</div>
+	<div class='intro_content'>
+		<div class='form-group row'>
+			<label class='col-md-3 col-form-label' tkey='lang.profile.edu.current'></label>
+			<div class='col-md-9'>
+				<p class='form-control-static experience' tkey='lang.profile.edu.current.info.1'></p>
+				<p class='form-control-static experience' tkey='lang.profile.edu.current.info.2'></p>
+				<p class='form-control-static experience' tkey='lang.profile.edu.current.info.3'></p>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<a 
+				class='href pull-right' 
+				href='https://www.youtube.com/watch?v=dmcjotRjlss&feature=youtu.be' 
+				tkey='lang.profile.edu.current.info.video'>
+			</a>
+		</div>
+		<div class='form-group row'>
+			<label class='col-md-3 col-form-label' tkey='lang.profile.edu.1'></label>
+			<div class='col-md-9'>
+				<p class='form-control-static experience' tkey='lang.profile.edu.1.info'></p>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Languages -->
+	<div class='form-group row intro_title'>
+		<h3 tkey='lang.words.languages'></h3>
+		<hr class='hr'>
+	</div>
+	<div class='intro_content'>
+		<div class='form-group row'>
+			<label class='col-md-3 col-form-label' tkey='lang.words.chinese'></label>
+			<div class='col-md-9'>
+				<p class='form-control-static experience' tkey='lang.words.monthertongue'></p>
+			</div>
+		</div>
+		<div class='form-group row'>
+			<label class='col-md-3 col-form-label' tkey='lang.words.english'></label>
+			<div class='col-md-9'>
+				<p class='form-control-static experience' tkey='lang.words.fluent'></p>
+			</div>
+		</div>
+	</div>
+</section>
+<script type='text/javascript' src='module/resume/profile.js'></script>

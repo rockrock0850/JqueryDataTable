@@ -11,44 +11,40 @@ var demo = (function() {
 		
 		var $table = $('div#searchResult table');
 		$table.DataTable({
-			bPaginate: true, // 翻頁功能
-			bLengthChange: true, // 改變每頁顯示數據數量
-			iDisplayLength: 10, // 顯示10筆換下一頁
-			bFilter: true, // 過濾功能
-			bSort: true, // 排序功能
-			bInfo: true, // 頁腳信息
-			bAutoWidth: false, // 自動寬度
-			todayBtn: true, 
+			paging: true, // 翻頁功能
+			lengthChange: true, // 改變每頁顯示數據數量
+			pageLength: 10, // 顯示10筆換下一頁
+			searching: true, // 過濾功能
+			ordering: true, // 排序功能
+			info: true, // 頁腳信息
+			autoWidth: false, // 自動寬度
 			data: getData(), // 注入資料
-			aoColumnDefs: [ // 欄位設定
-				{bSortable: false, aTargets: []}, // 選擇關閉哪個欄位排序功能(  )
+			columnDefs: [ // 欄位設定
+				{orderable: false, targets: []}, // 選擇關閉哪個欄位排序功能(  )
 				{
 					sWidth: '5.5%', 
-					aTargets: [0], 
+					targets: [0], 
 					data: null, 
-					searchable: false, 
-					orderable: false, 
-					title: "", 
 					className: 'osp_features', 
 					defaultContent: "<button id='button' class='small'>測試</button>"
 				},
-				{sWidth: '5.5%', aTargets: [1], title: '', data: 'FLOW_ID', className: 'FLOW_ID hide'}, 
-				{sWidth: '5.5%', aTargets: [2], title: '案件狀態', data: 'ORDER_STATUS', className: 'ORDER_STATUS'}, 
-				{sWidth: '5.5%', aTargets: [3], title: 'OSP單號', data: 'ODER_M_ID', className: 'ODER_M_ID'}, 
-				{sWidth: '5.5%', aTargets: [4], title: '案件類別 ', data: 'ORDER_TYPE_NAME', className: 'ORDER_TYPE_NAME'}, 
-				{sWidth: '5.5%', aTargets: [5], title: '進件系統', data: 'SOURCE_SYS_ID', className: 'SOURCE_SYS_ID'}, 
-				{sWidth: '5.5%', aTargets: [6], title: '產品類別', data: 'SOURCE_PROD_TYPE_NAME', className: 'SOURCE_PROD_TYPE_NAME'}, 
-				{sWidth: '5.5%', aTargets: [7], title: '交易型態', data: 'OPERATE_TYPE', className: 'OPERATE_TYPE'}, 
-				{sWidth: '5.5%', aTargets: [8], title: '進件時間', data: 'OSP_CREATE_TIME', className: 'OSP_CREATE_TIME'}, 
-				{sWidth: '5.5%', aTargets: [9], title: '門號/代表號/線路編號', data: 'MSISDN', className: 'MSISDN'}, 
-				{sWidth: '5.5%', aTargets: [10], title: '用戶名稱', data: 'CUST_NAME', className: 'CUST_NAME'}, 
-				{sWidth: '5.5%', aTargets: [11], title: '來源單號', data: 'SOURCE_ORDER_ID', className: 'SOURCE_ORDER_ID'}, 
-				{sWidth: '5.5%', aTargets: [12], title: '母子單', data: 'PARTENT_ORDER_ID', className: 'PARTENT_ORDER_ID'}, 
-				{sWidth: '5.5%', aTargets: [13], title: '筆數', data: 'COUNTS', className: 'COUNTS'}, 
-				{sWidth: '5.5%', aTargets: [14], title: '預計作業處理時間', data: 'EXPECT_PROCESS_TIME', className: 'EXPECT_PROCESS_TIME'}, 
-				{sWidth: '5.5%', aTargets: [15], title: '預計完成時間', data: 'EXPECT_COMPLETE_TIME', className: 'EXPECT_COMPLETE_TIME'}, 
-				{sWidth: '5.5%', aTargets: [16], title: '客戶指定生效日', data: 'CUST_SPECIFY_DATE', className: 'CUST_SPECIFY_DATE'}, 
-				{sWidth: '5.5%', aTargets: [17], title: '處理人員', data: 'PROCESS_USER_NAME', className: 'PROCESS_USER_NAME'}
+				{sWidth: '5.5%', targets: [1], title: '', data: 'FLOW_ID', className: 'FLOW_ID hide'}, 
+				{sWidth: '5.5%', targets: [2], title: '案件狀態', data: 'ORDER_STATUS', className: 'ORDER_STATUS'}, 
+				{sWidth: '5.5%', targets: [3], title: 'OSP單號', data: 'ODER_M_ID', className: 'ODER_M_ID'}, 
+				{sWidth: '5.5%', targets: [4], title: '案件類別 ', data: 'ORDER_TYPE_NAME', className: 'ORDER_TYPE_NAME'}, 
+				{sWidth: '5.5%', targets: [5], title: '進件系統', data: 'SOURCE_SYS_ID', className: 'SOURCE_SYS_ID'}, 
+				{sWidth: '5.5%', targets: [6], title: '產品類別', data: 'SOURCE_PROD_TYPE_NAME', className: 'SOURCE_PROD_TYPE_NAME'}, 
+				{sWidth: '5.5%', targets: [7], title: '交易型態', data: 'OPERATE_TYPE', className: 'OPERATE_TYPE'}, 
+				{sWidth: '5.5%', targets: [8], title: '進件時間', data: 'OSP_CREATE_TIME', className: 'OSP_CREATE_TIME'}, 
+				{sWidth: '5.5%', targets: [9], title: '門號/代表號/線路編號', data: 'MSISDN', className: 'MSISDN'}, 
+				{sWidth: '5.5%', targets: [10], title: '用戶名稱', data: 'CUST_NAME', className: 'CUST_NAME'}, 
+				{sWidth: '5.5%', targets: [11], title: '來源單號', data: 'SOURCE_ORDER_ID', className: 'SOURCE_ORDER_ID'}, 
+				{sWidth: '5.5%', targets: [12], title: '母子單', data: 'PARTENT_ORDER_ID', className: 'PARTENT_ORDER_ID'}, 
+				{sWidth: '5.5%', targets: [13], title: '筆數', data: 'COUNTS', className: 'COUNTS'}, 
+				{sWidth: '5.5%', targets: [14], title: '預計作業處理時間', data: 'EXPECT_PROCESS_TIME', className: 'EXPECT_PROCESS_TIME'}, 
+				{sWidth: '5.5%', targets: [15], title: '預計完成時間', data: 'EXPECT_COMPLETE_TIME', className: 'EXPECT_COMPLETE_TIME'}, 
+				{sWidth: '5.5%', targets: [16], title: '客戶指定生效日', data: 'CUST_SPECIFY_DATE', className: 'CUST_SPECIFY_DATE'}, 
+				{sWidth: '5.5%', targets: [17], title: '處理人員', data: 'PROCESS_USER_NAME', className: 'PROCESS_USER_NAME'}
 			]
 		});
 		shiftTableRelatedElements();

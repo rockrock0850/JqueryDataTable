@@ -3,7 +3,6 @@ var demo = (function() {
 		initDateTimePickers();
 	}
 	
-	//
 	var reInitializePickers = function() {
 		var formData = window.form2object('settingForm');
 		var $picker1 = $('div#demoPicker1');
@@ -14,14 +13,14 @@ var demo = (function() {
 		$picker1.datetimepicker({
 			format: 'yyyy-mm-dd hh:ii', // 日期格式
 			startDate: formData.begin,// 可選起始日期+時間
-			//endDate: formData.end, 可選結束日期+時間
+			endDate: formData.end,// 可選結束日期+時間
 			//pickerPosition: "top-left", 設定視窗彈出位置
 			autoclose: true, // 選完日期自動關閉日曆
 			todayBtn: true  // 顯示[今天]按鈕
 		});
 		$picker2.datetimepicker({
 			format: 'yyyy-mm-dd hh:ii', // 日期格式
-			//startDate: formData.begin, 可選起始日期+時間
+			startDate: formData.begin,// 可選起始日期+時間
 			endDate: formData.end,// 可選結束日期+時間
 			//pickerPosition: "top-left", 設定視窗彈出位置
 			autoclose: true, // 選完日期自動關閉日曆
@@ -33,7 +32,6 @@ var demo = (function() {
 	
 	/* Inner Method 
 	========================================================= */
-	//
 	var initDateTimePickers = function() {
 		if($().datetimepicker) {
 			$('.date-datetimepicker').datetimepicker({
