@@ -1,22 +1,20 @@
-<!-- BEGIN CSS -->
+<!-- CSS -->
 <link rel="stylesheet" type="text/css" href="module/example/Bootstrap/dateTimePicker/library/2.0.0/css/datetimepicker.css"/>
-<!-- END CSS -->
 
-<!-- BEGIN CUSTOM CSS -->
+<!-- Custom CSS -->
 <link rel="stylesheet" type="text/css" href="module/example/Bootstrap/dateTimePicker/library/custom/css/style-bootstrap-custom.css"/>
-<!-- END CUSTOM CSS -->
 
-<!-- BEGIN Body Section -->
+<!-- Body Section -->
 <div class="form-group">
 	
-	<!-- BEGIN Row -->
+	<!-- Row -->
 	<div class='row'>
 		<div class='col-md-offset-3'>
 			<div class='col-md-2'>
-				<label>日期時間選擇器:</label>
+				<label tkey='lang.words.label.dataTimePicker'></label>
 			</div>
 			
-			<!-- BEGIN Date Time Picker -->
+			<!-- Date Time Picker -->
 			<div class='col-md-10' style="margin-left: -20px;">
 				<div class="col-md-4">
 					<div id='demoPicker1' class="input-group date date-datetimepicker">
@@ -31,7 +29,7 @@
 				<div class="col-md-2">
 					<span>~</span>
 				</div>
-				<div class="col-md-4" style="margin-left: -99px;">
+				<div class="col-md-4">
 					<div id='demoPicker2' class="input-group date date-datetimepicker">
 						<input class="form-control" type="text">
 						<span class="input-group-addon input-group-btn">
@@ -42,37 +40,32 @@
 					</div>
 				</div>
 			</div>
-			<!-- END Date Time Picker -->
-			
 		</div>
 	</div>
-	<!-- END Row -->
 	
-	<!-- BEGIN Row -->
+	<!-- Row -->
 	<div class='row'>
 		<hr>
 	</div>
-	<!-- END Row -->
 	
-	<!-- BEGIN Row -->
+	<!-- Row -->
 	<div class='row'>
-		<h3>請自行設定可選擇的起始日期與結束日期:</h3>
+		<h3 tkey='lang.sentence.label.1'></h3>
 	</div>
-	<!-- END Row -->
 	
-	<!-- BEGIN Row -->
+	<!-- Row -->
 	<div class='row'>
 		<div class='col-md-offset-3'>
 			<form id='settingForm'>
 				<div class='col-md-1'>
-					<label>選擇:</label>
+					<label tkey='lang.words.label.choose'></label>
 				</div>
 			
-				<!-- BEGIN Date Time Picker -->
+				<!-- Date Time Picker -->
 				<div class='col-md-10' style="margin-left: 53px;">
 					<div class="col-md-4">
 						<div class="input-group date date-datetimepicker">
-							<input class="form-control" type="text" name="begin" placeholder='起始日期'>
+							<input class="form-control" type="text" name="begin" tkey='lang.words.beginDate'>
 							<span class="input-group-addon input-group-btn">
 								<button class="btn btn-default" type="button">
 									<i class="fa fa-calendar"></i>
@@ -83,9 +76,9 @@
 					<div class="col-md-2">
 						<span>~</span>
 					</div>
-					<div class="col-md-4" style="margin-left: -100px;">
+					<div class="col-md-4">
 						<div class="input-group date date-datetimepicker">
-							<input class="form-control" type="text" name='end' placeholder='結束日期'>
+							<input class="form-control" type="text" name='end' tkey='lang.words.endDate'>
 							<span class="input-group-addon input-group-btn">
 								<button class="btn btn-default" type="button">
 									<i class="fa fa-calendar"></i>
@@ -94,28 +87,20 @@
 						</div>
 					</div>
 				</div>
-				<!-- END Date Time Picker -->
-			
 			</form>
 		</div>
 	</div>
-	<!-- END Row -->
 	
-	<!-- BEGIN Row -->
+	<!-- Row -->
 	<div class='row'>
 		<div class='col-md-2 pull-right'>
-			<button id='setButton' class='btn btn-primary btn-sm'>設定</button>
+			<button id='setButton' class='btn btn-primary btn-sm' tkey='lang.words.set'></button>
 		</div>
 	</div>
-	<!-- END Row -->
-	
 </div>
-<!-- END Body Section -->
 
-<!-- BEGIN JAVASCRIPT -->
+<!-- Java Script -->
 <script type="text/javascript" src="module/example/Bootstrap/dateTimePicker/library/2.0.0/js/bootstrap-datetimepicker.js"></script>
-<!-- END JAVASCRIPT -->
 
-<!-- BEGIN CUSTOM JAVASCRIPT -->
+<!-- Custom Java Script -->
 <script type="text/javascript" src="module/example/Bootstrap/dateTimePicker/demo.js"></script>
-<!-- END CUSTOM JAVASCRIPT -->

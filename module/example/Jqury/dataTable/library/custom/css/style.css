@@ -1,6 +1,11 @@
 @charset "utf-8";
 /* Data Table 
 ============================================================== */
+.scrollX{ 
+	overflow-y: auto; 
+	clear:both; 
+}
+
 .dataTables_paginate {
 	width: 100%;
 	margin: 0 !important;

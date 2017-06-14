@@ -1,15 +1,23 @@
-var languageUtil = function () {	
+var langUtil = function () {	
 	var langs = ['en', 'zh-TW'];
-	var changeLangs = function($this) {
-		var code = $this.attr('code');
+	var changeLang = function(code) {
+		var uri = 'resource/common/json/lang/' + code + '.json';
 		
 		if ($.inArray(code, langs) == 1){
-			$.getJSON('resource/common/json/lang/' + code + '.json', translate);
+			$.getJSON(uri, translate);
 		}else{
-			$.getJSON('resource/common/json/lang/' + 'en.json', translate);
+			$.getJSON('resource/common/json/lang/en.json', translate);
 		}
+		
+		if (!code) {
+			return;
+		}
+		
+		sessionStorage.setItem('langCode', code);
 	}
 	
+	/* Inner Method
+	================================================================================================ */
 	var translate = function (data){
 		$("[tkey]").each(function(index) {
 			var $this = $(this);
@@ -30,7 +38,6 @@ var languageUtil = function () {
 	}
 	
 	return {
-		changeLangs: changeLangs,
-		translate: translate
+		changeLang: changeLang
 	}
 }()

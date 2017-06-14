@@ -1,16 +1,28 @@
+//# sourceURL=dataTable.js
 var demo = (function() {
 	var init = function() {
-		initDataTable();
+		initTable();
 	}
 	
 	/* Inner Method 
 	========================================================= */
+	var setTableClickEvent = function (table) {
+		$('table#dataTable').on('click', 'button', function () {
+			var $tr = $(this).closest('tr');
+			var row = table.row($tr).data();
+			console.log(row);
+		});
+	}
+	
 	//初始化DataTable
-	var initDataTable = function() {
+	var initTable = function() {
 		timeFlag('BEGIN TIME: ', new Date());
 		
-		var $table = $('div#searchResult table');
-		$table.DataTable({
+		var table = $('table#dataTable').DataTable({
+			dom:
+				'<"row"<"pull-left"f><"pull-right"l>>' +
+				'<"row"<"scrollX"t>>' +
+				'<"row"<"pull-left"i><"pull-right"p>>',
 			paging: true, // 翻頁功能
 			lengthChange: true, // 改變每頁顯示數據數量
 			pageLength: 10, // 顯示10筆換下一頁
@@ -20,36 +32,40 @@ var demo = (function() {
 			autoWidth: false, // 自動寬度
 			data: getData(), // 注入資料
 			columnDefs: [ // 欄位設定
-				{orderable: false, targets: []}, // 選擇關閉哪個欄位排序功能(  )
+				{orderable: false, targets: [0]}, // 選擇關閉哪個欄位排序功能(  )
+				{targets: '_all', render: function (data, type, full, mate) {
+					// console.log(data);
+					
+					return data;
+				}},
 				{
-					sWidth: '5.5%', 
 					targets: [0], 
+					title: '功能',
 					data: null, 
-					className: 'osp_features', 
+					className: 'dt-nowrap', 
 					defaultContent: "<button id='button' class='small'>測試</button>"
 				},
-				{sWidth: '5.5%', targets: [1], title: '', data: 'FLOW_ID', className: 'FLOW_ID hide'}, 
-				{sWidth: '5.5%', targets: [2], title: '案件狀態', data: 'ORDER_STATUS', className: 'ORDER_STATUS'}, 
-				{sWidth: '5.5%', targets: [3], title: 'OSP單號', data: 'ODER_M_ID', className: 'ODER_M_ID'}, 
-				{sWidth: '5.5%', targets: [4], title: '案件類別 ', data: 'ORDER_TYPE_NAME', className: 'ORDER_TYPE_NAME'}, 
-				{sWidth: '5.5%', targets: [5], title: '進件系統', data: 'SOURCE_SYS_ID', className: 'SOURCE_SYS_ID'}, 
-				{sWidth: '5.5%', targets: [6], title: '產品類別', data: 'SOURCE_PROD_TYPE_NAME', className: 'SOURCE_PROD_TYPE_NAME'}, 
-				{sWidth: '5.5%', targets: [7], title: '交易型態', data: 'OPERATE_TYPE', className: 'OPERATE_TYPE'}, 
-				{sWidth: '5.5%', targets: [8], title: '進件時間', data: 'OSP_CREATE_TIME', className: 'OSP_CREATE_TIME'}, 
-				{sWidth: '5.5%', targets: [9], title: '門號/代表號/線路編號', data: 'MSISDN', className: 'MSISDN'}, 
-				{sWidth: '5.5%', targets: [10], title: '用戶名稱', data: 'CUST_NAME', className: 'CUST_NAME'}, 
-				{sWidth: '5.5%', targets: [11], title: '來源單號', data: 'SOURCE_ORDER_ID', className: 'SOURCE_ORDER_ID'}, 
-				{sWidth: '5.5%', targets: [12], title: '母子單', data: 'PARTENT_ORDER_ID', className: 'PARTENT_ORDER_ID'}, 
-				{sWidth: '5.5%', targets: [13], title: '筆數', data: 'COUNTS', className: 'COUNTS'}, 
-				{sWidth: '5.5%', targets: [14], title: '預計作業處理時間', data: 'EXPECT_PROCESS_TIME', className: 'EXPECT_PROCESS_TIME'}, 
-				{sWidth: '5.5%', targets: [15], title: '預計完成時間', data: 'EXPECT_COMPLETE_TIME', className: 'EXPECT_COMPLETE_TIME'}, 
-				{sWidth: '5.5%', targets: [16], title: '客戶指定生效日', data: 'CUST_SPECIFY_DATE', className: 'CUST_SPECIFY_DATE'}, 
-				{sWidth: '5.5%', targets: [17], title: '處理人員', data: 'PROCESS_USER_NAME', className: 'PROCESS_USER_NAME'}
+				{targets: [1], title: '案件狀態', data: 'ORDER_STATUS', className: 'dt-nowrap'}, 
+				{targets: [2], title: 'OSP單號', data: 'ODER_M_ID', className: 'dt-nowrap'}, 
+				{targets: [3], title: '案件類別 ', data: 'ORDER_TYPE_NAME', className: 'dt-nowrap'}, 
+				{targets: [4], title: '進件系統', data: 'SOURCE_SYS_ID', className: 'dt-nowrap'}, 
+				{targets: [5], title: '產品類別', data: 'SOURCE_PROD_TYPE_NAME', className: 'dt-nowrap'}, 
+				{targets: [6], title: '交易型態', data: 'OPERATE_TYPE', className: 'dt-nowrap'}, 
+				{targets: [7], title: '進件時間', data: 'OSP_CREATE_TIME', className: 'dt-nowrap'}, 
+				{targets: [8], title: '門號/代表號/線路編號', data: 'MSISDN', className: 'dt-nowrap'}, 
+				{targets: [9], title: '用戶名稱', data: 'CUST_NAME', className: 'dt-nowrap CUST_NAME'}, 
+				{targets: [10], title: '來源單號', data: 'SOURCE_ORDER_ID', className: 'dt-nowrap'}, 
+				{targets: [11], title: '母子單', data: 'PARTENT_ORDER_ID', className: 'dt-nowrap'}, 
+				{targets: [12], title: '筆數', data: 'COUNTS', className: 'dt-nowrap'}, 
+				{targets: [13], title: '預計作業處理時間', data: 'EXPECT_PROCESS_TIME', className: 'dt-nowrap'}, 
+				{targets: [14], title: '預計完成時間', data: 'EXPECT_COMPLETE_TIME', className: 'dt-nowrap'}, 
+				{targets: [15], title: '客戶指定生效日', data: 'CUST_SPECIFY_DATE', className: 'dt-nowrap'}, 
+				{targets: [16], title: '處理人員', data: 'PROCESS_USER_NAME', className: 'dt-nowrap'},
+				{targets: [17], title: '', data: 'FLOW_ID', className: 'dt-nowrap hide'}
 			]
 		});
-		shiftTableRelatedElements();
-		
 		timeFlag('END TIME: ', new Date());
+		setTableClickEvent(table);
 	}
 	
 	//取得資料表的資料
@@ -85,16 +101,6 @@ var demo = (function() {
 	var timeFlag = function(flag, date) {
 		time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 		console.log(flag + time);
-	}
-	
-	//
-	var shiftTableRelatedElements = function() {
-		var $searchResult = $('div#searchResult');
-		
-		//注意: $=: 尋找xxx屬性內容以xxx結尾之元素
-		$searchResult.find("[class$=_length]").addClass('pull-right');// 將dataTable顯示筆數選單靠右
-		$searchResult.find('[class$=_filter]').addClass('pull-left');// 將過濾欄位靠左
-		$searchResult.find('[class$=_paginate]').attr('align', 'right');// 將dataTable分頁靠右
 	}
 	
 	return{

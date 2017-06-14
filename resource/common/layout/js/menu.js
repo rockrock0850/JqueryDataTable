@@ -4,26 +4,27 @@ var menu = function () {
 		var $a = $('nav#nav a');
 		
 		$a.unbind('click').click(function () {
-			changContent($(this));
-			languageUtil.changeLangs($(this));
+			var path = $(this).attr('menuPath');
+			var code = $(this).attr('code');
+			
+			changContent(path);
+			langUtil.changeLang(code);
 		});
 	}
 	
 	/* Inner Method
 	=================================================================================== */
-	var changContent = function ($this) {
-		var menuPath = $this.attr('menuPath');
-		
-		if(!menuPath) {
+	var changContent = function (path) {
+		if(!path) {
 			return;
 		}
 		
-		if (menuPath == 'index.html' || menuPath == '') {
+		if (path == 'index.html' || path == '') {
 			location.reload();
 			window.location.href = "#menu";
 		}
 		
-		$('section#content').empty().attr('loadPage', menuPath);
+		$('section#content').empty().attr('loadPage', path);
 		window.location.href = "#content";
 		pageUtil.load();
 	}

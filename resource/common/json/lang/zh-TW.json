@@ -12,7 +12,7 @@
 	"lang.profile.exp.current": "至今 - 7月 2016",
 	"lang.profile.exp.current.info.1": "-參與「遠傳電信」之「OSP」專案開發與維護", 
 	"lang.profile.exp.current.info.2": "1.專案概述:",
-	"lang.profile.exp.current.info.3": "集中管理平台, 介接遠傳內部資費案件流之所有相關系統",
+	"lang.profile.exp.current.info.3": "類似某種集中管理平台, 介接遠傳內部資費案件流之所有相關系統",
 	"lang.profile.exp.current.info.4": "2.任務概述:",
 	"lang.profile.exp.current.info.5": "負責多項功能開發與API介接",
 	"lang.profile.exp.2": "7月 2016 - 1月 2016",
@@ -24,16 +24,16 @@
 	"lang.profile.exp.2.info.6": "3.功能概述:",
 	"lang.profile.exp.2.info.7": "後台使用對象略分為代理商、企業與員工, 依據不同等級的使用者帳號或權限而開啟或關閉相對應之功能, 建立不同層級之帳號相依性",
 	"lang.profile.exp.1": "1月 2016 - 5月 2015",
-	"lang.profile.exp.1.info.1": "-參與「台灣之星」（　簡稱台星　）官網之「專案比一比」功能維護與開發",
+	"lang.profile.exp.1.info.1": "-參與「台灣之星」官網之「專案比一比」功能維護與開發",
 	"lang.profile.exp.1.info.2": "1.功能概述:",
-	"lang.profile.exp.1.info.3": "將台星自家專案與其他各大電信業者之專案, 就其「資費」、「優惠」、「合約」等互相比較之。",
-	"lang.profile.edu.current": "9月 2011",
-	"lang.profile.edu.current.info.1": "明新科技大學 電機工程研究所 資訊組畢",
+	"lang.profile.exp.1.info.3": "將台灣之星自家專案與其他各大電信業者之專案, 就其「資費」、「優惠」、「合約」等互相比較之。",
+	"lang.profile.edu.current": "6月 2014",
+	"lang.profile.edu.current.info.1": "電機工程研究所 資訊組畢",
 	"lang.profile.edu.current.info.2": "論文概述: ",
-	"lang.profile.edu.current.info.3": "主要探討手持裝置間的資源分享議題, 舉凡頻寬、影像、圖片或運算效能等",
+	"lang.profile.edu.current.info.3": "探討手持裝置間的資源分享議題, 舉凡頻寬、影像、圖片或運算效能等",
 	"lang.profile.edu.current.info.video": "實作影片",
-	"lang.profile.edu.1": "9月 2009",
-	"lang.profile.edu.1.info": "明新科技大學 資訊工程系畢",
+	"lang.profile.edu.1": "6月 2010",
+	"lang.profile.edu.1.info": "資訊工程系畢",
 	
 	"lang.words.continue": "接著往下閱讀",
 	"lang.words.personalData": "個人資料",
@@ -56,5 +56,13 @@
 	"lang.words.instagram": "IG",
 	"lang.words.name": "名稱",
 	"lang.words.message": "訊息",
-	"lang.words.submit": "確認"
+	"lang.words.submit": "確認",
+	"lang.words.beginDate": "起始日期",
+	"lang.words.endDate": "結束日其",
+	"lang.words.set": "設定",
+	
+	"lang.words.label.dataTimePicker": "日期時間選擇器: ",
+	"lang.words.label.choose": "選擇: ",
+	
+	"lang.sentence.label.1": "請設定開始日期和結束日期: "
 }

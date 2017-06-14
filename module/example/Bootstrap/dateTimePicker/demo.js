@@ -1,13 +1,16 @@
+//# sourceURL=dateTimePicker.js
 var demo = (function() {
 	var init = function() {
 		initDateTimePickers();
+		
+		var code = sessionStorage.getItem('langCode');
+		langUtil.changeLang(code);
 	}
 	
 	var reInitializePickers = function() {
 		var formData = window.form2object('settingForm');
 		var $picker1 = $('div#demoPicker1');
 		var $picker2 = $('div#demoPicker2');
-		console.log(formData);
 		
 		$('div[id^=demoPicker]').datetimepicker('remove');// 移除Date Time Picker設定
 		$picker1.datetimepicker({
@@ -41,6 +44,21 @@ var demo = (function() {
 				todayBtn: true  // 顯示[今天]按鈕
 			});
 		}
+		
+		setFlexiblePos();
+	}
+	
+	var setFlexiblePos = function () {
+		var pos = '';
+		$.each($('.date-datetimepicker'), function (i) {
+			var $this = $(this);
+			
+			if (i%2 == 0) {
+				pos = $this.position();
+				return;
+			}
+			$this.parent().css('margin-left', -85-pos.left);
+		});
 	}
 	
 	return{
