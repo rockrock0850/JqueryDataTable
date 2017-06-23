@@ -1,6 +1,6 @@
 {
-    "lang.title": "主要標題",
-	"lang.title.sub": "次要標題",
+    "lang.title": "Adam的履歷表",
+	"lang.title.sub": "嗨~歡迎來到Adam的秘密樂園~!",
 	
 	"lang.name.fullName": "葉光倫",
 	"lang.name.nickname": "Adam",
@@ -12,7 +12,7 @@
 	"lang.profile.exp.current": "至今 - 7月 2016",
 	"lang.profile.exp.current.info.1": "-參與「遠傳電信」之「OSP」專案開發與維護", 
 	"lang.profile.exp.current.info.2": "1.專案概述:",
-	"lang.profile.exp.current.info.3": "類似某種集中管理平台, 介接遠傳內部資費案件流之所有相關系統",
+	"lang.profile.exp.current.info.3": "集中管理平台, 介接遠傳內部資費案件流之所有相關系統",
 	"lang.profile.exp.current.info.4": "2.任務概述:",
 	"lang.profile.exp.current.info.5": "負責多項功能開發與API介接",
 	"lang.profile.exp.2": "7月 2016 - 1月 2016",
