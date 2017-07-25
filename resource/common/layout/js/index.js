@@ -1,3 +1,4 @@
+document.title = "Adam's Resume";
 var index = function () {
 	var checkSupportStorage = function () {
 		if (typeof(Storage) == "undefined" ) {
@@ -8,18 +9,19 @@ var index = function () {
 	}
 	
 	return {
-		checkSupportStorage: checkSupportStorage
+		bootstrap: function() {
+			checkSupportStorage();
+			pageUtil.load();
+			
+			var sessionLang = sessionStorage.getItem('langCode');
+			if (!sessionLang) {
+				sessionLang = constant.defaultLang;
+			}
+			langUtil.changeLang(sessionLang);
+		}
 	}
 }()
 
 $(document).ready(function () {
-	document.title = "Adam's Resume";
-	index.checkSupportStorage();
-	pageUtil.load();
-	
-	var sessionLang = sessionStorage.getItem('langCode');
-	if (!sessionLang) {
-		sessionLang = constant.defaultLang;
-	}
-	langUtil.changeLang(sessionLang);
+	index.bootstrap();
 });

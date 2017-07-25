@@ -20,7 +20,7 @@
 </div>
 <div class="column">
 	<h3 tkey='lang.words.getInTouch'></h3>
-	<form action="#" method="post">
+	<form id='emailMeForm' action="#" method="post">
 		<div class="field half first">
 			<label class='template_co' for="name" tkey='lang.words.name'></label>
 			<input id="name" class='template_co' name="name" type="text" tkey='lang.words.name'>
@@ -33,8 +33,9 @@
 			<label class='template_co' for="message" tkey='lang.words.message'></label>
 			<textarea id="message" class='template_co' name="message" rows="6" tkey='lang.words.message'></textarea>
 		</div>
-		<ul class="actions">
-			<li><button class='template_co' class="button" type="submit" tkey='lang.words.submit'></button></li>
-		</ul>
 	</form>
+	<ul class="actions">
+		<li><button id='sendEamilBtn' class='template_co' class="button" tkey='lang.words.submit'></button></li>
+	</ul>
 </div>
+<script type="text/javascript" src="resource/common/layout/js/contact.js"></script>

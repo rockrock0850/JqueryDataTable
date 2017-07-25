@@ -12,8 +12,6 @@ var menu = function () {
 		});
 	}
 	
-	/* Inner Method
-	=================================================================================== */
 	var changContent = function (path) {
 		if(!path) {
 			return;
@@ -30,10 +28,12 @@ var menu = function () {
 	}
 	
 	return {
-		setMmenuClickEvent: setMmenuClickEvent
+		bootstrap: function () {
+			setMmenuClickEvent();
+		}
 	}
 }()
 
 $(document).ready(function() {
-	menu.setMmenuClickEvent();
+	menu.bootstrap();
 });

@@ -1,11 +1,5 @@
 //# sourceURL=dataTable.js
 var demo = (function() {
-	var init = function() {
-		initTable();
-	}
-	
-	/* Inner Method 
-	========================================================= */
 	var setTableClickEvent = function (table) {
 		$('table#dataTable').on('click', 'button', function () {
 			var $tr = $(this).closest('tr');
@@ -35,7 +29,6 @@ var demo = (function() {
 				{orderable: false, targets: [0]}, // 選擇關閉哪個欄位排序功能(  )
 				{targets: '_all', render: function (data, type, full, mate) {
 					// console.log(data);
-					
 					return data;
 				}},
 				{
@@ -97,17 +90,21 @@ var demo = (function() {
 		return data;
 	}
 	
-	//
 	var timeFlag = function(flag, date) {
 		time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 		console.log(flag + time);
 	}
 	
 	return{
-		init: init
+		bootstrap: function() {
+			var code = sessionStorage.getItem('langCode');
+			langUtil.changeLang(code);
+			
+			initTable();
+		}
 	}
 })()
 
 $(document).ready(function() {
-	demo.init();
+	demo.bootstrap();
 });
