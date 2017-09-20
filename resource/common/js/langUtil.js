@@ -6,12 +6,10 @@ var langUtil = function () {
 		if ($.inArray(code, langs) == 1){
 			$.getJSON(uri, translate);
 		}else{
-			$.getJSON('resource/common/json/lang/en.json', translate);
+			$.getJSON('resource/common/json/lang/zh-TW.json', translate);
 		}
 		
-		if (!code) {
-			return;
-		}
+		if (!code) {return;}
 		
 		sessionStorage.setItem('langCode', code);
 	}
