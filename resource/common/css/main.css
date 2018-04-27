@@ -28,6 +28,20 @@ pre{
 
 /* Profile
 ============================================================== */
+.about_me {
+	text-indent: 2em;
+	font-size: 16px;
+	background: transparent;
+}
+
+.article_title {
+	text-indent: 2em;
+}
+
+.article_content {
+	text-indent: 4em;
+}
+
 .my_name{
     margin: auto;
     width: 50%;
