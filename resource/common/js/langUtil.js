@@ -3,7 +3,7 @@ var langUtil = function () {
 	var changeLang = function(code) {
 		var uri = 'resource/common/json/lang/' + code + '.json';
 		
-		if ($.inArray(code, langs) == 1){
+		if ($.inArray(code, langs) == 0){
 			$.getJSON(uri, translate);
 		}else{
 			$.getJSON('resource/common/json/lang/zh-TW.json', translate);
