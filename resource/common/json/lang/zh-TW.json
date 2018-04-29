@@ -12,25 +12,25 @@
 	
 	
 	"lang.profile.exp.current": "至今 - 5月 2017",
-	"lang.profile.exp.current.info.1": "-曾工作於「遠東商銀」", 
+	"lang.profile.exp.current.info.1": "-曾工作於「遠東商銀」。擔任PG", 
 	"lang.profile.exp.current.info.2": "概述: 負責個人網路銀行、行動網路銀行、企業網路銀行等系統維護。",
 	"lang.profile.exp.3": "5月2016 - 7月 2016",
-	"lang.profile.exp.3.info.1": "-曾工作於「遠傳電信」", 
+	"lang.profile.exp.3.info.1": "-曾工作於「遠傳電信」。擔任PG", 
 	"lang.profile.exp.3.info.2": "概述: 負責新新專案「OSP」之開發與設計, 使用技術包含RESTFul api、spring mvc、spring data jpa、spring jdbc、spring aop等",
 	"lang.profile.exp.2": "7月 2016 - 1月 2016",
-	"lang.profile.exp.2.info.1": "-曾工作於「詮通電腦網頁設計公司」, 參與「錢老闆」之產品開發",
+	"lang.profile.exp.2.info.1": "-曾工作於「詮通電腦網頁設計公司」, 參與「錢老闆」之產品開發。擔任PG、SD",
 	"lang.profile.exp.2.info.2": "概述: 負責專案架構規劃與實作, 專案內所整合之框架包含Spring mvc、struts2、mybatis等",
 	"lang.profile.exp.1": "1月 2016 - 5月 2015",
-	"lang.profile.exp.1.info.1": "-曾工作於「台灣之星」電信公司",
+	"lang.profile.exp.1.info.1": "-曾工作於「台灣之星」電信公司。擔任PG",
 	"lang.profile.exp.1.info.2": "概述: 負責資費方案的軟體之設計與開發。",
 	
 	
 	"lang.profile.edu.current": "6月 2014",
-	"lang.profile.edu.current.info.1": "電機工程研究所 資訊組畢",
+	"lang.profile.edu.current.info.1": "明新科技大學 電機工程研究所 資訊組畢",
 	"lang.profile.edu.current.info.2": "概述: 探討手持裝置間的資源分享議題, 舉凡頻寬、影像、圖片或運算效能等",
 	"lang.profile.edu.current.info.video": "實作影片",
 	"lang.profile.edu.1": "6月 2010",
-	"lang.profile.edu.1.info": "資訊工程系畢",
+	"lang.profile.edu.1.info": "明新科技大學 資訊工程系畢",
 	
 	"lang.words.continue": "接著往下閱讀",
 	"lang.words.personalData": "個人資料",
