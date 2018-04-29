@@ -11,9 +11,12 @@
 	"lang.profile.email": "b96170094@gmail.com",
 	
 	
-	"lang.profile.exp.current": "Current - JUL 2016",
-	"lang.profile.exp.current.info.1": "-Worked in Far Eas Tone(FET) that is a telecom service provider", 
-	"lang.profile.exp.current.info.2": "Summary: Responsible for NewNew project design that include exception handler、RESTFul api design、web mvc architecture etc.",
+	"lang.profile.exp.current": "Current - MAY 2017",
+	"lang.profile.exp.current.info.1": "-Worked in Far Eastern Internetional Bank", 
+	"lang.profile.exp.current.info.2": "Summary: ",
+	"lang.profile.exp.3": "MAY 2017 - JUL 2016",
+	"lang.profile.exp.3.info.1": "-Worked in Far Eas Tone(FET) that is a telecom service provider", 
+	"lang.profile.exp.3.info.2": "Summary: Responsible for NewNew project design that include exception handler、RESTFul api design、web mvc architecture etc.",
 	"lang.profile.exp.2": "JUL 2016 - JAN 2016",
 	"lang.profile.exp.2.info.1": "-Worked in EveryWhere.com. Responsible「Money Boss」 project's system design.",
 	"lang.profile.exp.2.info.2": "Summary: Responsible for software architecture design that integration Spring mvc、Mybatis and struts2 etc.",
@@ -58,5 +61,7 @@
 	"lang.words.label.dataTimePicker": "DateTemePicker: ",
 	"lang.words.label.choose": "Choose: ",
 	
-	"lang.sentence.label.1": "Set the begin date and end date please: "
+	"lang.sentence.label.1": "Set the begin date and end date please: ",
+	
+	"lang.about.me.1": "Coming Soon."
 }
