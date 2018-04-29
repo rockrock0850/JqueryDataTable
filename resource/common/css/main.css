@@ -12,7 +12,7 @@
 /* Custom CSS */
 @page :pseudo-class {
 	size: A4 landscape;
-	margin: 2cm;
+	margin: 0.1cm;
 }
 
 /* Other
