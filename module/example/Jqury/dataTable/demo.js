@@ -3,6 +3,7 @@ var demo = (function() {
 	
 	var bootstrap = function () {
 		initTable();
+		langUtil.changeLang();
 	}
 	
 	function setTableClickEvent (table) {

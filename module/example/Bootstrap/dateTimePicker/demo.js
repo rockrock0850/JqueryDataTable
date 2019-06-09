@@ -2,7 +2,8 @@ var demo = (function() {
 	
 	var bootstrap = function () {
 		initDateTimePickers();
-		
+		langUtil.changeLang();
+	
 		$('button#setButton').unbind('click').click(function() {
 			reInitializePickers();
 		});

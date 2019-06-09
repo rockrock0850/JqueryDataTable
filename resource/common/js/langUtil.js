@@ -3,6 +3,10 @@ var langUtil = function () {
 	var langs = ['en', 'zh-TW'];
 	
 	var changeLang = function(code) {
+		if (!code) {
+			code = sessionStorage.getItem('langCode');
+		}
+		
 		var uri = 'resource/common/json/lang/' + code + '.json';
 		
 		if ($.inArray(code, langs) == 0){
@@ -11,7 +15,9 @@ var langUtil = function () {
 			$.getJSON('resource/common/json/lang/zh-TW.json', translate);
 		}
 		
-		if (!code) {return;}
+		if (!code) {
+			return;
+		}
 		
 		sessionStorage.setItem('langCode', code);
 	}
