@@ -18,11 +18,11 @@ var index = function () {
 	}
 	
 	function init () {
-		var menu = 'resource/common/layout/menu.html?' + now;
-		var banner = 'resource/common/layout/header.html?' + now;
-		var content = 'module/resume/profile.html?' + now;
-		var contact = 'resource/common/layout/contact.html?' + now;
-		var footer = 'resource/common/layout/footer.html?' + now;
+		var menu = 'resource/common/layout/menu.html?now=' + now;
+		var banner = 'resource/common/layout/header.html?now=' + now;
+		var content = 'module/resume/profile.html?now=' + now;
+		var contact = 'resource/common/layout/contact.html?now=' + now;
+		var footer = 'resource/common/layout/footer.html?now=' + now;
 		
 		$('section#menu').attr('loadPage', menu);
 		$('section#banner').attr('loadPage', banner);

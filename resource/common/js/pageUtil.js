@@ -7,7 +7,7 @@ var pageUtil = function () {
 			var path = $(this).attr('loadPage');
 			
 			if (path) {
-				$(this).load(path + '?' + now);
+				$(this).load(path + '?now=' + now);
 				$(this).removeAttr('loadPage');
 			}
 		});
