@@ -1,7 +1,10 @@
 document.title = "Adam's Resume";
 var index = function () {
 	
+	var now = new Date().getTime();
+	
 	var bootstrap = function () {
+		init();
 		checkSupportStorage();
 		pageUtil.load();
 		
@@ -12,6 +15,20 @@ var index = function () {
 		}
 		
 		langUtil.changeLang(sessionLang);
+	}
+	
+	function init () {
+		var menu = 'resource/common/layout/menu.html?stamp=' + now;
+		var banner = 'resource/common/layout/header.html?stamp=' + now;
+		var content = 'module/resume/profile.html?stamp=' + now;
+		var contact = 'resource/common/layout/contact.html?stamp=' + now;
+		var footer = 'resource/common/layout/footer.html?stamp=' + now;
+		
+		$('section#menu').attr('loadPage', menu);
+		$('section#banner').attr('loadPage', banner);
+		$('section#content').attr('loadPage', content);
+		$('section#contact').attr('loadPage', contact);
+		$('section#footer').attr('loadPage', footer);
 	}
 	
 	function checkSupportStorage () {

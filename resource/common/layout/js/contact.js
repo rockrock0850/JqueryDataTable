@@ -5,7 +5,7 @@ var contact = function () {
 		$('button#sendEmailBtn').click(function () {
 			var emailMe = 'form#emailMeForm';
 			
-			if (inputValidation($(emailMe));) {
+			if (inputValidation($(emailMe))) {
 				$(emailMe)
 					.attr('action', 'mailto:b96170094@gmail.com')
 					.submit();
