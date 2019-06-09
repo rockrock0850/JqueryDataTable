@@ -11,11 +11,14 @@
 	"lang.profile.email": "b96170094@gmail.com",
 	
 	
-	"lang.profile.exp.current": "至今 - 5月 2017",
-	"lang.profile.exp.current.info.1": "-曾工作於「遠東商銀」。擔任PG", 
-	"lang.profile.exp.current.info.2": "概述: 負責個人網路銀行、行動網路銀行、企業網路銀行等系統維護。",
+	"lang.profile.exp.current": "6月 2018 - 2月2019",
+	"lang.profile.exp.current.info.1": "-曾工作於「遠時數位」。擔任PG", 
+	"lang.profile.exp.current.info.2": "概述: 負責「Friday」電子商務拍賣平台的產品開發以及維護。",
+	"lang.profile.exp.4": "5月 2017 - 6月2018",
+	"lang.profile.exp.4.info.1": "-曾工作於「遠東商銀」。擔任PG", 
+	"lang.profile.exp.4.info.2": "概述: 負責個人網路銀行、行動網路銀行、企業網路銀行等系統維護。",
 	"lang.profile.exp.3": "5月2016 - 7月 2016",
-	"lang.profile.exp.3.info.1": "-曾工作於「遠傳電信」。擔任PG", 
+	"lang.profile.exp.3.info.1": "-曾工作於「遠傳電信」。擔任PG和助理SD", 
 	"lang.profile.exp.3.info.2": "概述: 負責新新專案「OSP」之開發與設計, 使用技術包含RESTFul api、spring mvc、spring data jpa、spring jdbc、spring aop等",
 	"lang.profile.exp.2": "7月 2016 - 1月 2016",
 	"lang.profile.exp.2.info.1": "-曾工作於「詮通電腦網頁設計公司」, 參與「錢老闆」之產品開發。擔任PG、SD",
