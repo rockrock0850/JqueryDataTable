@@ -1,17 +1,24 @@
 var menu = function () {
-	var setMmenuClickEvent = function () {
-		var $a = $('nav#nav a');
+
+	var bootstrap = function () {
+		setMmenuClickEvent();
+	}
+	
+	function setMmenuClickEvent () {
+		var a = 'nav#nav a';
 		
-		$a.unbind('click').click(function () {
+		$(a).unbind('click').click(function () {
 			var path = $(this).attr('menuPath');
 			var code = $(this).attr('code');
 			
-			changContent(path);
+			if (path) {
+				changContent(path);	
+			}
 			langUtil.changeLang(code);
 		});
 	}
 	
-	var changContent = function (path) {
+	function changContent (path) {
 		if(!path) {
 			return;
 		}
@@ -28,9 +35,7 @@ var menu = function () {
 	}
 	
 	return {
-		bootstrap: function () {
-			setMmenuClickEvent();
-		}
+		bootstrap : bootstrap
 	}
 }()
 
