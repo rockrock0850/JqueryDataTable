@@ -17,13 +17,14 @@ var menu = function () {
 			return;
 		}
 		
-		if (path == 'index.html' || path == '') {
+		if (!path || path == 'index.html') {
 			location.reload();
 			window.location.href = "#menu";
+		} else {
+			window.location.href = "#content";
 		}
 		
 		$('section#content').empty().attr('loadPage', path);
-		window.location.href = "#content";
 		pageUtil.load();
 	}
 	
