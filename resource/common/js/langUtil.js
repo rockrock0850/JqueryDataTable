@@ -9,7 +9,7 @@ var langUtil = function () {
 		
 		var uri = 'resource/common/json/lang/' + code + '.json';
 		
-		if ($.inArray(code, langs) == 1){
+		if ($.inArray(code, langs) != -1){
 			$.getJSON(uri, translate);
 		}else{
 			$.getJSON('resource/common/json/lang/' + constant.defaultLang + '.json', translate);
