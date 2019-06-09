@@ -100,9 +100,7 @@ pre {
 	list-style: none !important;
 	display: none !important;
 	margin: -32px 0 0 27px !important;
-	min-width: 78px;
-	/*
-	*/
+	width: fit-content;
 	padding: 0;
 	background-color: rgb(138, 114, 114);
 	border-radius: 12px 12px 12px 12px;
@@ -128,7 +126,7 @@ ul.sub_menu>li {
 	list-style: none !important;
 	display: none !important;
 	margin: 0px 0 5px 36px !important;
-	min-width: 120px;
+    width: fit-content;
 	padding: 0;
 	background-color: rgb(138, 114, 114);
 	border-radius: 12px 12px 12px 12px;

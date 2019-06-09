@@ -29,5 +29,4 @@ var index = function () {
 
 $(document).ready(function () {
 	index.bootstrap();
-	location.reload();
 });
