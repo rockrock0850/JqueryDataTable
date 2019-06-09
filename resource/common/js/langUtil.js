@@ -1,5 +1,7 @@
-var langUtil = function () {	
+var langUtil = function () {
+	
 	var langs = ['en', 'zh-TW'];
+	
 	var changeLang = function(code) {
 		var uri = 'resource/common/json/lang/' + code + '.json';
 		
@@ -14,23 +16,20 @@ var langUtil = function () {
 		sessionStorage.setItem('langCode', code);
 	}
 	
-	/* Inner Method
-	================================================================================================ */
-	var translate = function (data){
-		$("[tkey]").each(function(index) {
-			var $this = $(this);
-			var tkey = $this.attr('tkey');
+	function translate (data){
+		$("[tkey]").each(function() {
+			var tkey = $(this).attr('tkey');
 			var stringTrans = data[tkey];
 			
 			if (!stringTrans) {
 				stringTrans = '<span style="color: red; font-family: cursive;">Property not found.</span>';
 			}
 			
-			var tagName = $this[0].tagName;
+			var tagName = $(this)[0].tagName;
 			if (tagName == 'INPUT' || tagName == 'TEXTAREA') {
-				$this.attr('placeholder', stringTrans);
+				$(this).attr('placeholder', stringTrans);
 			} else {
-				$this.html(stringTrans);	
+				$(this).html(stringTrans);	
 			}
 		});
 	}
