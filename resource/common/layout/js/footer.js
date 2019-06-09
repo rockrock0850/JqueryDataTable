@@ -1,4 +1,3 @@
-//# sourceURL=footer.js
 var footer = function () {
 }()
 

@@ -1,4 +1,3 @@
-//# sourceURL=menu.js
 var menu = function () {
 	var setMmenuClickEvent = function () {
 		var $a = $('nav#nav a');

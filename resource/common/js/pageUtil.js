@@ -5,7 +5,7 @@ var pageUtil = function () {
 			var path = $(this).attr('loadPage');
 			
 			if (path) {
-				$(this).load(path + '?stamp=' + now);
+				$(this).load(path);
 				$(this).removeAttr('loadPage');
 			}
 		});

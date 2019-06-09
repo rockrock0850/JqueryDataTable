@@ -1,4 +1,3 @@
-//# sourceURL=contact.js
 var contact = function () {
 	
 	var bootstrap = function () {

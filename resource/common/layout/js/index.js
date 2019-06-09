@@ -27,8 +27,6 @@ var index = function () {
 	}
 }();
 
-var now = new Date().getTime();
-
 $(document).ready(function () {
 	index.bootstrap();
 });
