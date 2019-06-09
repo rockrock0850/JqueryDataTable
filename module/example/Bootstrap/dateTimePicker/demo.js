@@ -1,12 +1,8 @@
-//# sourceURL=dateTimePicker.js
 var demo = (function() {
 	
 	var bootstrap = function () {
 		initDateTimePickers();
 		
-		var code = sessionStorage.getItem('langCode');
-		langUtil.changeLang(code);
-	
 		$('button#setButton').unbind('click').click(function() {
 			reInitializePickers();
 		});
