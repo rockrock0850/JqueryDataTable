@@ -1,3 +1,4 @@
+//# sourceURL=sdf.js
 var contact = function () {
 	
 	var bootstrap = function () {
@@ -13,14 +14,19 @@ var contact = function () {
 	}
 	
 	function inputValidation ($form) {
-		var inputs = $form.find('input');
+		var result = true;
+		var inputs = 'input,textarea';
 		
-		if (!inputs || inputs.length <= 0) {
-			alert('Please type complete infomation at the form.');
-			return false;
-		}
+		$form.find(inputs).each(function () {
+			if (!$(this).val()) {
+				alert('Please type complete infomation at the form.');
+				result = false;
+				
+				return false;
+			}
+		});
 		
-		return true;
+		return result;
 	}
 	
 	return {
