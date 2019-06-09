@@ -11,10 +11,10 @@ var menu = function () {
 			var path = $(this).attr('menuPath');
 			var code = $(this).attr('code');
 			
-			if (path) {
-				changContent(path);	
+			changContent(path);	
+			if (code) {
+				langUtil.changeLang(code);
 			}
-			langUtil.changeLang(code);
 		});
 	}
 	
@@ -24,14 +24,15 @@ var menu = function () {
 		}
 		
 		if (!path || path == 'index.html') {
-			location.reload();
 			window.location.href = "#menu";
+			location.reload();
 		} else {
 			window.location.href = "#content";
+			$('section#content')
+				.empty()
+				.attr('loadPage', path);
+			pageUtil.load();
 		}
-		
-		$('section#content').empty().attr('loadPage', path);
-		pageUtil.load();
 	}
 	
 	return {
