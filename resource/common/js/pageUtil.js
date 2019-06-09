@@ -2,11 +2,11 @@ var pageUtil = function () {
 	
 	var load = function () {
 		$.each($('*'), function () {
-			var path = $(this).attr('loadpage');
+			var path = $(this).attr('loadPage');
 			
 			if (path) {
-				$(this).load(path + '?stamp=' + new Date().getTime());
-				$(this).removeAttr('loadpage');
+				$(this).load(path + '?stamp=' + now);
+				$(this).removeAttr('loadPage');
 			}
 		});
 	}

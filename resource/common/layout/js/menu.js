@@ -24,7 +24,7 @@ var menu = function () {
 			window.location.href = "#content";
 		}
 		
-		$('section#content').empty().attr('loadpage', path);
+		$('section#content').empty().attr('loadPage', path);
 		pageUtil.load();
 	}
 	
