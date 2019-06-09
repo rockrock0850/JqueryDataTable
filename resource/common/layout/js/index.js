@@ -24,11 +24,11 @@ var index = function () {
 		var contact = 'resource/common/layout/contact.html?stamp=' + now;
 		var footer = 'resource/common/layout/footer.html?stamp=' + now;
 		
-		$('section#menu').attr('loadPage', menu);
-		$('section#banner').attr('loadPage', banner);
-		$('section#content').attr('loadPage', content);
-		$('section#contact').attr('loadPage', contact);
-		$('section#footer').attr('loadPage', footer);
+		$('section#menu').get(0).attr('loadPage', menu);
+		$('section#banner').get(0).attr('loadPage', banner);
+		$('section#content').get(0).attr('loadPage', content);
+		$('section#contact').get(0).attr('loadPage', contact);
+		$('section#footer').get(0).attr('loadPage', footer);
 	}
 	
 	function checkSupportStorage () {
