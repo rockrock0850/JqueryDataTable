@@ -11,7 +11,9 @@ var index = function () {
 			sessionLang = constant.defaultLang;
 		}
 		
-		langUtil.changeLang(sessionLang);
+		setTimeout(function () {
+			langUtil.changeLang(sessionLang);
+		}, 700);
 	}
 	
 	function checkSupportStorage () {

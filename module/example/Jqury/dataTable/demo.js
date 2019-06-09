@@ -1,15 +1,19 @@
-//# sourceURL=dataTable.js
+//# sourceURL=demo.js
 var demo = (function() {
-	var setTableClickEvent = function (table) {
+	
+	var bootstrap = function () {
+		initTable();
+	}
+	
+	function setTableClickEvent (table) {
 		$('table#dataTable').on('click', 'button', function () {
 			var $tr = $(this).closest('tr');
-			var row = table.row($tr).data();
-			console.log(row);
+			var data = table.row($tr).data();
+			alert('選擇了第' + data.FLOW_ID + '筆資料');
 		});
 	}
 	
-	//初始化DataTable
-	var initTable = function() {
+	function initTable () {
 		timeFlag('BEGIN TIME: ', new Date());
 		
 		var table = $('table#dataTable').DataTable({
@@ -57,53 +61,50 @@ var demo = (function() {
 				{targets: [17], title: '', data: 'FLOW_ID', className: 'dt-nowrap hide'}
 			]
 		});
+		
 		timeFlag('END TIME: ', new Date());
 		setTableClickEvent(table);
 	}
 	
 	//取得資料表的資料
-	var getData = function() {
+	function getData () {
 		var data = [];
-		for(var i = 0; i < 300; i++) {
+		
+		for(var i = 1; i < 301; i++) {
 			var object = {};
 			
-			object.FLOW_ID = '測試資料'; 
-			object.ORDER_STATUS = '測試資料'; 
-			object.ODER_M_ID = '測試資料'; 
-			object.ORDER_TYPE_NAME = '測試資料'; 
-			object.SOURCE_SYS_ID = '測試資料'; 
-			object.SOURCE_PROD_TYPE_NAME = '測試資料'; 
-			object.OPERATE_TYPE = '測試資料'; 
-			object.OSP_CREATE_TIME = '測試資料'; 
-			object.MSISDN = '測試資料'; 
-			object.CUST_NAME = '測試資料'; 
-			object.SOURCE_ORDER_ID = '測試資料'; 
-			object.PARTENT_ORDER_ID = '測試資料'; 
-			object.COUNTS = '測試資料'; 
-			object.EXPECT_PROCESS_TIME = '測試資料'; 
-			object.EXPECT_COMPLETE_TIME = '測試資料'; 
-			object.CUST_SPECIFY_DATE = '測試資料'; 
-			object.PROCESS_USER_NAME = '測試資料'; 
+			object.FLOW_ID = i; 
+			object.ORDER_STATUS = '案件狀態' + i; 
+			object.ODER_M_ID = '測試資料' + i; 
+			object.ORDER_TYPE_NAME = '測試資料' + i; 
+			object.SOURCE_SYS_ID = '測試資料' + i; 
+			object.SOURCE_PROD_TYPE_NAME = '測試資料' + i; 
+			object.OPERATE_TYPE = '測試資料' + i; 
+			object.OSP_CREATE_TIME = '測試資料' + i; 
+			object.MSISDN = '測試資料' + i; 
+			object.CUST_NAME = '測試資料' + i; 
+			object.SOURCE_ORDER_ID = '測試資料' + i; 
+			object.PARTENT_ORDER_ID = '測試資料' + i; 
+			object.COUNTS = '測試資料' + i; 
+			object.EXPECT_PROCESS_TIME = '測試資料' + i; 
+			object.EXPECT_COMPLETE_TIME = '測試資料' + i; 
+			object.CUST_SPECIFY_DATE = '測試資料' + i; 
+			object.PROCESS_USER_NAME = '測試資料' + i; 
 			data.push(object);
 		}
 		
 		return data;
 	}
 	
-	var timeFlag = function(flag, date) {
+	function timeFlag (flag, date) {
 		time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 		console.log(flag + time);
 	}
 	
 	return{
-		bootstrap: function() {
-			var code = sessionStorage.getItem('langCode');
-			langUtil.changeLang(code);
-			
-			initTable();
-		}
+		bootstrap: bootstrap
 	}
-})()
+})();
 
 $(document).ready(function() {
 	demo.bootstrap();

@@ -21,9 +21,6 @@ var langUtil = function () {
 			var tkey = $(this).attr('tkey');
 			var stringTrans = data[tkey];
 			
-			console.log('tkey : ' + tkey)
-			console.log('stringTrans : ' + stringTrans);
-			
 			if (!stringTrans) {
 				stringTrans = '<span style="color: red; font-family: cursive;">Property not found.</span>';
 			}
