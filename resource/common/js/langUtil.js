@@ -12,7 +12,7 @@ var langUtil = function () {
 		if ($.inArray(code, langs) == 0){
 			$.getJSON(uri, translate);
 		}else{
-			$.getJSON('resource/common/json/lang/zh-TW.json', translate);
+			$.getJSON('resource/common/json/lang/' + constant.defaultLang + '.json', translate);
 		}
 		
 		if (!code) {
